@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Algorithm2DArrays
 {
     public static boolean isFound(int[][] arr, int target)
@@ -92,4 +94,21 @@ public class Algorithm2DArrays
         }
         return arr;
     }
+
+    public static ArrayList<String> findStringsOfLength(String[][] wordChart, int len)
+    {
+        ArrayList<String> arr = new ArrayList<String>();
+        for(int r = 0; r < wordChart.length; r++)
+        {
+            for(int c = 0; c < wordChart[0].length; c++)
+            {
+                if(wordChart[r][c].length() == len)
+                {
+                    arr.add(wordChart[r][c]);
+                }
+            }
+        }
+        return arr;
+    }
+
 }
